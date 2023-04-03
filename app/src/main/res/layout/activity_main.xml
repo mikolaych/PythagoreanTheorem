@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_dark"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tittle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="Теорема Пифагора"
+        android:textColor="@android:color/holo_green_light"
+        android:textSize="30sp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:textSize="20sp"
+        android:textColor="#E40000"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/tittle" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/naklon"
+        android:layout_width="194dp"
+        android:layout_height="210dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/pif2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tittle" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/hipotenuza"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="-60dp"
+        android:layout_marginBottom="80dp"
+        android:background="#306709"
+        android:gravity="center"
+        android:inputType="numberDecimal"
+        android:textColor="#2196F3"
+        android:textColorHint="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/naklon"
+        app:layout_constraintEnd_toStartOf="@+id/naklon" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/verticalCatet"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-10dp"
+        android:background="#939804"
+        android:gravity="center"
+        android:inputType="numberDecimal"
+        android:textColor="#2196F3"
+        android:textColorHint="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/horizontalCatet"
+        app:layout_constraintStart_toEndOf="@+id/naklon"
+        app:layout_constraintTop_toTopOf="@+id/naklon"
+        app:layout_constraintVertical_bias="0.567" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/horizontalCatet"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-60dp"
+        android:layout_marginTop="16dp"
+        android:background="#B30217"
+        android:gravity="center"
+        android:inputType="numberDecimal"
+        android:textColor="#2196F3"
+        android:textColorHint="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/naklon"
+        app:layout_constraintHorizontal_bias="0.649"
+        app:layout_constraintStart_toStartOf="@+id/naklon"
+        app:layout_constraintTop_toBottomOf="@+id/naklon" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/appCompatImageView"
+        android:layout_width="185dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/formula"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalCatet" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/start"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:background="#596CCA"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="@string/startBtn"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatImageView" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
